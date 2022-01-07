@@ -40,8 +40,8 @@ SELECT "fullname" from "Employees";
 
 SELECT "fullname", "phoneextension" FROM "Employees" WHERE "isparttime" = false;
 
-
-
+INSERT INTO "Employees" ("fullname",  "salary", "jobposition", "phoneextension", "isparttime")
+VALUES ('Rick Astley', '450', 'software developer', '90', 'true');
 
 
 
