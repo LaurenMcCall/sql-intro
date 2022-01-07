@@ -36,6 +36,8 @@ VALUES ('John Travolta', '300', 'scientologist', '6', 'false');
 INSERT INTO "Employees" ("fullname",  "salary", "jobposition", "phoneextension", "isparttime")
 VALUES ('Oprah', '15000', 'president', '10', 'false');
 
+SELECT "fullname" from "Employees";
+
 
 
 
