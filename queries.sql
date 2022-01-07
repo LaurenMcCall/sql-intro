@@ -45,4 +45,5 @@ VALUES ('Rick Astley', '450', 'software developer', '90', 'true');
 
 UPDATE "Employees" SET "salary" = '450' WHERE "jobposition" = 'cook';
 
+DELETE FROM "Employees" WHERE "fullname" = 'Lazy Larry';
 
