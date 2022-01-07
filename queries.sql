@@ -47,3 +47,4 @@ UPDATE "Employees" SET "salary" = '450' WHERE "jobposition" = 'cook';
 
 DELETE FROM "Employees" WHERE "fullname" = 'Lazy Larry';
 
+ALTER TABLE "Employees" ADD Column "ParkingSpot" varchar(10);
