@@ -216,4 +216,9 @@ FROM "Employees"
 JOIN "Departments" ON "Employees"."DepartmentId" = "Departments"."Id"
 WHERE "Departments"."Building" = 'East Side';
 
+-- [ ] Find all orders that contain the product id of 2.
+SELECT *
+FROM "Orders"
+JOIN "ProductOrders" ON "Orders"."Id" = "ProductOrders"."OrderId"
+WHERE "ProductOrders"."Id" = 2;
 
