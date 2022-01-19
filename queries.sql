@@ -222,3 +222,20 @@ FROM "Orders"
 JOIN "ProductOrders" ON "Orders"."Id" = "ProductOrders"."OrderId"
 WHERE "ProductOrders"."Id" = 2;
 
+
+-- [ ] Find the quantity of the Flowbee product from order with order number X529. 
+-- You may not write the value of an Id in your query, let SQL do the work 
+-- (HINT: JOIN)
+
+SELECT "Orders"."OrderNumber", "ProductOrders"."OrderQuantity", "Products"."Name"
+FROM "ProductOrders" 
+JOIN "Orders" ON "Orders"."OrderId" = "ProductOrders"."Id"
+JOIN "Products" ON "Products"."Id" = 'Flowbee'
+WHERE "Product"."Name"= 'Flowbee';
+
+SELECT "Orders"."OrderNumber", "ProductOrders"."OrderQuantity", "Products"."Name"
+FROM "Orders" 
+JOIN "ProductOrders" ON "ProductOrders"."Id" = "Orders"."Id"
+JOIN "Products" ON "Products"."Id" = "ProductOrders"."ProductId"
+WHERE "Orders"."OrderNumber"= 'X529' AND "Products"."Name" = 'Flowbee';
+
