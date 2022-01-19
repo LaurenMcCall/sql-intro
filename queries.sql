@@ -169,3 +169,11 @@ VALUES ('Development', 'Main'),
 INSERT INTO "Departments" ("DepartmentName", "Building")
 VALUES ('Marketing', 'North');
 
+INSERT INTO "Employees" ("FullName", "Salary", "JobPosition", "PhoneExtension", "IsPartTime", "DepartmentId")
+VALUES ('Tim Smith', 40000, 'Programmer',	123,	false,	1);
+
+INSERT INTO "Employees" ("FullName", "Salary", "JobPosition", "PhoneExtension", "IsPartTime", "DepartmentId")
+VALUES ('Barbara Ramsey',	80000,	'Manager',	234,	false,	1);
+
+INSERT INTO "Employees" ("FullName", "Salary", "JobPosition", "PhoneExtension", "IsPartTime", "DepartmentId")
+VALUES ('Tom Jones',	32000,	'Admin',	456,	true,	2);
