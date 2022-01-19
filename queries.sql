@@ -183,3 +183,14 @@ VALUES (12.45,	'Widget',	'The Original Widget',	100);
 
 INSERT INTO "Products" ("Price", "Name", "Description", "QuantityInStock")
 VALUES (99.99,	'Flowbee',	'Perfect for haircuts',	3);
+
+INSERT INTO "Orders" ("OrderNumber", "DatePlaced", "Email")
+VALUES ('X529', 2020-01-01, 'person@example.com');
+
+-- [ ] Add an order quantity of 3 for the product named Widget to the order X529
+INSERT INTO "ProductOrders"("ProductId", "OrderId", "OrderQuantity")
+VALUES (1, 1, 3);
+
+-- [ ] Add an order quantity of 2 for the product named Flowbee to the order X529
+INSERT INTO "ProductOrders"("ProductId", "OrderId", "OrderQuantity")
+VALUES (2, 1, 2);
