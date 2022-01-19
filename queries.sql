@@ -140,3 +140,25 @@ VALUES ('Oprah', '15000', 'president', '10', 'n', 'false');
 ALTER TABLE "Employees" ADD Column "DepartmentId" INTEGER NULL REFERENCES "Departments" ("Id");
 
 ALTER TABLE "Employees" DROP Column "ParkingSpot";
+
+CREATE TABLE "Products"(
+  "Id" SERIAL PRIMARY KEY,
+  "Price" DECIMAL (6,2),
+  "Name" TEXT,
+  "Description" TEXT,
+  "QuantityInStock" INT
+);
+
+CREATE TABLE "Orders"(
+  "Id" SERIAL PRIMARY KEY,
+  "OrderNumber" TEXT,
+  "DatePlaced" DATE,
+  "Email" TEXT
+);
+
+CREATE TABLE "ProductOrders" (
+  "Id" SERIAL PRIMARY KEY,
+  "ProductId" INT REFERENCES "Products" ("Id"),
+  "OrderId" INT REFERENCES "Orders" ("Id"),
+  "OrderQuantity" INT,
+);
