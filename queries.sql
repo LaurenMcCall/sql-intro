@@ -194,3 +194,26 @@ VALUES (1, 1, 3);
 -- [ ] Add an order quantity of 2 for the product named Flowbee to the order X529
 INSERT INTO "ProductOrders"("ProductId", "OrderId", "OrderQuantity")
 VALUES (2, 1, 2);
+
+-- [ ] Given a building, return all employees that work in that building. 
+-- Show this query for buildings named North Side, East Side, 
+-- and finally a building that you actually have in your data 
+-- even if your data doesn't have any departments in those buildings. 
+-- NOTE this means you can't manually look up Ids and use them, 
+-- you have to let SQL do that work. (Hint: JOIN)
+SELECT *
+FROM "Employees"
+JOIN "Departments" ON "Employees"."DepartmentId" = "Departments"."Id"
+WHERE "Departments"."Building" = 'Main';
+
+SELECT *
+FROM "Employees"
+JOIN "Departments" ON "Employees"."DepartmentId" = "Departments"."Id"
+WHERE "Departments"."Building" = 'North Side';
+
+SELECT *
+FROM "Employees"
+JOIN "Departments" ON "Employees"."DepartmentId" = "Departments"."Id"
+WHERE "Departments"."Building" = 'East Side';
+
+
