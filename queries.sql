@@ -162,3 +162,10 @@ CREATE TABLE "ProductOrders" (
   "OrderId" INT REFERENCES "Orders" ("Id"),
   "OrderQuantity" INT,
 );
+
+INSERT INTO "Departments" ("DepartmentName", "Building")
+VALUES ('Development', 'Main'),
+
+INSERT INTO "Departments" ("DepartmentName", "Building")
+VALUES ('Marketing', 'North');
+
